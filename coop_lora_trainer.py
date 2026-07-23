@@ -535,7 +535,7 @@ def finetune(args, dataset):
 
         for name, param in coop_lora_model.named_parameters():
             
-            if "prompt_learner" not in name and "lora" not in name and "txt_w" not in name and "vpt" not in name and 'txt2visual_proj' not in name and 'ln_1_pos' not in name:
+            if "prompt_learner" not in name and "lora" not in name and "txt_w" not in name and "vpt" not in name and 'txt2visual_proj' not in name and 'ln_1_pos' not in name and 'txt_rate' not in name and 'minus_txtrates' not in name:
                 #print('nograd:',name)
                 param.requires_grad_(False)
             #else:
